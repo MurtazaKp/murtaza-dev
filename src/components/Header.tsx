@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "./ui/button";
 import { Menu, X, Moon, Sun } from "lucide-react";
+import Link from "next/link";
 import { useState, useLayoutEffect } from "react";
 
 export function Header() {
@@ -37,11 +38,11 @@ export function Header() {
     <header className="fixed top-0 w-full glass-effect z-50 border-b border-border/50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2">
           <div className="w-10 h-10 bg-gradient-to-br from-primary to-purple-600 rounded flex items-center justify-center">
             <span className="text-white font-bold text-base">MK</span>
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
