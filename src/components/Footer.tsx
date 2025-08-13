@@ -101,7 +101,9 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex items-center space-x-2 text-muted-foreground">
-            <span>© {currentYear} Frontend Dev. All rights reserved.</span>
+            <span>
+              © {currentYear} Murtaza Khopoliwala. All rights reserved.
+            </span>
           </div>
 
           <div className="flex items-center space-x-2 text-muted-foreground">
