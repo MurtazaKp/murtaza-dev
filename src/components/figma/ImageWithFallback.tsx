@@ -1,4 +1,4 @@
-"use client";
+"use cliefoo";
 import React, { useState } from "react";
 
 export function ImageWithFallback(

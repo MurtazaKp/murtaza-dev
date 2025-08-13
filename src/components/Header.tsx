@@ -38,12 +38,9 @@ export function Header() {
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-br from-primary to-purple-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">FD</span>
+          <div className="w-10 h-10 bg-gradient-to-br from-primary to-purple-600 rounded flex items-center justify-center">
+            <span className="text-white font-bold text-base">MK</span>
           </div>
-          <span className="font-semibold text-lg gradient-text">
-            Frontend Dev
-          </span>
         </div>
 
         {/* Desktop Navigation */}

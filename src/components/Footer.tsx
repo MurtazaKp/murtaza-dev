@@ -29,12 +29,9 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">FD</span>
+              <div className="w-14 h-14 bg-gradient-to-br from-primary to-purple-600 rounded flex items-center justify-center">
+                <span className="text-white font-bold text-xl">MK</span>
               </div>
-              <span className="font-semibold text-xl gradient-text">
-                Frontend Dev
-              </span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
               Creating beautiful, performant, and user-friendly web applications
