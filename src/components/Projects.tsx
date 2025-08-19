@@ -8,98 +8,98 @@ export function Projects() {
   const projects = [
     {
       id: 1,
-      title: "React Dashboard Pro",
+      title: "Qualitia AI",
       description:
-        "A comprehensive admin dashboard built with React, TypeScript, and Tailwind CSS featuring real-time analytics, data visualization, and responsive design. Perfect for managing complex data workflows.",
+        "Qualitia is a AI native Salesforce automation testing platforms that ensure precision &amp; faster results. Optimise Salesforce automation testing with our innovative platform.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-      technologies: [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Chart.js",
-        "Motion",
-      ],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Strapi", "RWD"],
       github: "https://github.com",
-      demo: "https://demo.com",
+      demo: "https://www.qualitia.ai/",
       featured: true,
       stats: { stars: 142, views: "2.3k" },
-      category: "Dashboard",
+      category: "Landing Page",
       year: "2024",
     },
     {
       id: 2,
-      title: "E-Commerce PWA",
+      title: "Setoo AI",
       description:
-        "A modern e-commerce progressive web app with Next.js, featuring offline support, push notifications, and seamless mobile experience. Built with performance in mind.",
+        "Setoo AI helps businesses create AI agents to automate reviews, schedule calls, and enhance customer interactions. Boost efficiency with our AI-driven solutions.",
       image:
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=500&fit=crop",
-      technologies: ["Next.js", "PWA", "Stripe", "Prisma"],
+        "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QWl8ZW58MHx8MHx8fDA%3D",
+      technologies: ["Next.js", "Sanity", "Tailwind CSS", "Turborepo"],
       github: "https://github.com",
-      demo: "https://demo.com",
+      demo: "https://setoo.ai/",
       featured: true,
       stats: { stars: 98, views: "1.8k" },
-      category: "E-Commerce",
+      category: "AI Landing Page",
       year: "2024",
     },
     {
       id: 3,
-      title: "Vue Component Library",
+      title: "Mediqlogix",
       description:
-        "A reusable Vue.js component library with TypeScript support and Storybook integration. Includes comprehensive documentation and testing.",
+        "MediQlogix a digital solution company providing AI and ML-powered platform to hospitals and healthcare organizations’ needs to enhance their “Global Quality Matrix”. The platform is based on Saas (Software As A Service) or Internal Single Install Systems.",
       image:
-        "https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?w=800&h=500&fit=crop",
-      technologies: ["Vue.js", "TypeScript", "Storybook", "Vite"],
+        "https://plus.unsplash.com/premium_photo-1699387204159-184c8e0ac55e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMyfHxIZWFsdGhjYXJlfGVufDB8fDB8fHww",
+      technologies: [
+        "Nextjs",
+        "TypeScript",
+        "Storybook",
+        "Tailwind CSS",
+        "Vercel",
+      ],
       github: "https://github.com",
-      demo: "https://demo.com",
+      demo: "https://mediq-logix.vercel.app/",
       featured: false,
       stats: { stars: 76, views: "1.2k" },
-      category: "Library",
+      category: "Healthcare Landing ",
       year: "2023",
     },
     {
       id: 4,
-      title: "Animated Portfolio",
+      title: "Y-Macro",
       description:
-        "A stunning portfolio website with advanced animations and 3D elements built with React and Three.js. Showcases modern web capabilities.",
+        "Y-Macro Analytics specializes in modeling regional economic trends to drive precision strategies. Where national data stops, we begin—unlocking deeper insights that empower businesses to grow across Bharat. We also strive to be a trusted partner to the Government in advancing inclusive growth and attracting foreign investments into the country.",
       image:
-        "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=500&fit=crop",
-      technologies: ["React", "Three.js", "Motion", "GSAP"],
+        "https://images.unsplash.com/photo-1707761918029-1295034aa31e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fEFuYWx5dGljc3xlbnwwfHwwfHx8MA%3D%3D",
+      technologies: ["React", "Strapi", "Bootstrap", "GSAP"],
       github: "https://github.com",
-      demo: "https://demo.com",
+      demo: "https://www.y-macro.com/",
       featured: false,
       stats: { stars: 234, views: "3.1k" },
-      category: "Portfolio",
-      year: "2023",
+      category: "Analytics",
+      year: "2024",
     },
     {
       id: 5,
-      title: "Task Management App",
+      title: "Techtribe",
       description:
-        "A collaborative task management application with real-time updates and team features. Built for productivity and team collaboration.",
+        "TechTribe Resume Builder transforms the way you apply for jobs. Build professional, ATS-friendly resumes in minutes. Generate personalized cover letters with AI assistance.Uncover skill gaps and get tailored course suggestions.Smarter tools to land your dream job, faster.",
       image:
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=500&fit=crop",
+        "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGpvYnxlbnwwfHwwfHx8MA%3D%3D",
       technologies: ["React", "Socket.io", "Node.js", "MongoDB"],
       github: "https://github.com",
-      demo: "https://demo.com",
+      demo: "https://techtribe-resume-builder.vercel.app",
       featured: false,
       stats: { stars: 89, views: "1.5k" },
       category: "Productivity",
-      year: "2023",
+      year: "2024",
     },
     {
       id: 6,
-      title: "Weather Dashboard",
+      title: "Crep Protect",
       description:
-        "A beautiful weather dashboard with interactive maps and detailed forecasts. Features real-time data visualization and location-based services.",
+        "Crep Protect, a leading brand in sneaker care, aimed to strengthen its online presence for a global audience. The goal was to create an advanced e-commerce website that enhances user experience, optimizes web performance, and introduces new features.",
       image:
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=500&fit=crop",
-      technologies: ["React", "D3.js", "Weather API", "Mapbox"],
+        "https://images.unsplash.com/photo-1674027392851-7b34f21b07ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fEVDT01NRVJDRXxlbnwwfHwwfHx8MA%3D%3D",
+      technologies: ["React", "Shopify", "Liquid", "Theme Development"],
       github: "https://github.com",
-      demo: "https://demo.com",
+      demo: "https://crepprotect.com/",
       featured: false,
       stats: { stars: 156, views: "2.1k" },
-      category: "Data Viz",
+      category: "E-Commerce",
       year: "2023",
     },
   ];
@@ -176,21 +176,6 @@ export function Projects() {
 
                 {/* Action Buttons */}
                 <div className="absolute bottom-4 left-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-                  <Button
-                    size="sm"
-                    variant="secondary"
-                    className="flex-1 bg-background/90 text-foreground hover:bg-background backdrop-blur-sm"
-                    asChild
-                  >
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </a>
-                  </Button>
                   <Button
                     size="sm"
                     className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground"
