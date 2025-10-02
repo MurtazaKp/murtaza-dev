@@ -16,6 +16,20 @@ export function Projects() {
   const projects = [
     {
       id: 1,
+      title: "Jamea Saifiyah Business School (JSBS)",
+      description:
+        "An institution that provides quality education in business and management, rooted in the principles of the Islamic ethos.",
+      image: "/jsbs.png",
+      technologies: ["Bootstrap", "SEO", "Next.js", "RWD", "SASS/SCSS"],
+      github: null,
+      demo: "https://jsbs.jameasaifiyah.edu/",
+      featured: true,
+      stats: null,
+      category: "Educational Website",
+      year: "2024",
+    },
+    {
+      id: 2,
       title: "Qualitia AI",
       description:
         "Qualitia is a AI native Salesforce automation testing platforms that ensure precision & faster results. Optimise Salesforce automation testing with our innovative platform.",
@@ -30,7 +44,7 @@ export function Projects() {
       year: "2024",
     },
     {
-      id: 2,
+      id: 3,
       title: "Setoo AI",
       description:
         "Setoo AI helps businesses create AI agents to automate reviews, schedule calls, and enhance customer interactions. Boost efficiency with our AI-driven solutions.",
@@ -45,7 +59,7 @@ export function Projects() {
       year: "2024",
     },
     {
-      id: 3,
+      id: 4,
       title: "Mediqlogix",
       description:
         "MediQlogix a digital solution company providing AI and ML-powered platform to hospitals and healthcare organizations’ needs to enhance their “Global Quality Matrix”.",
@@ -66,7 +80,7 @@ export function Projects() {
       year: "2023",
     },
     {
-      id: 4,
+      id: 5,
       title: "Y-Macro",
       description:
         "Y-Macro Analytics specializes in modeling regional economic trends to drive precision strategies. Where national data stops, we begin—unlocking deeper insights that empower businesses to grow across Bharat.",
@@ -81,7 +95,7 @@ export function Projects() {
       year: "2024",
     },
     {
-      id: 5,
+      id: 6,
       title: "Techtribe",
       description:
         "TechTribe Resume Builder transforms the way you apply for jobs. Build professional, ATS-friendly resumes in minutes. Generate personalized cover letters with AI assistance.",
@@ -95,21 +109,21 @@ export function Projects() {
       category: "Productivity",
       year: "2024",
     },
-    {
-      id: 6,
-      title: "Crep Protect",
-      description:
-        "Crep Protect, a leading brand in sneaker care, aimed to strengthen its online presence for a global audience. The goal was to create an advanced e-commerce website that enhances user experience.",
-      image:
-        "https://images.unsplash.com/photo-1674027392851-7b34f21b07ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fEVDT01NRVJDRXxlbnwwfHwwfHx8MA%3D%3D",
-      technologies: ["React", "Shopify", "Liquid", "Theme Development"],
-      github: "https://github.com",
-      demo: "https://crepprotect.com/",
-      featured: false,
-      stats: { stars: 156, views: "2.1k" },
-      category: "E-Commerce",
-      year: "2023",
-    },
+    // {
+    //   id: 6,
+    //   title: "Crep Protect",
+    //   description:
+    //     "Crep Protect, a leading brand in sneaker care, aimed to strengthen its online presence for a global audience. The goal was to create an advanced e-commerce website that enhances user experience.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1674027392851-7b34f21b07ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fEVDT01NRVJDRXxlbnwwfHwwfHx8MA%3D%3D",
+    //   technologies: ["React", "Shopify", "Liquid", "Theme Development"],
+    //   github: "https://github.com",
+    //   demo: "https://crepprotect.com/",
+    //   featured: false,
+    //   stats: { stars: 156, views: "2.1k" },
+    //   category: "E-Commerce",
+    //   year: "2023",
+    // },
   ];
 
   return (
@@ -192,7 +206,7 @@ export function Projects() {
                       {project.year}
                     </div>
                   </div>
-                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm line-clamp-3">
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm line-clamp-4">
                     {project.description}
                   </p>
 
