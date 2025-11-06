@@ -2,17 +2,25 @@
 import { useState } from "react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { ExternalLink, Github, Star, Eye, Calendar } from "lucide-react";
+import {
+  ExternalLink,
+  Calendar,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Projects() {
   const [activeCard, setActiveCard] = useState<number | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 6;
 
   const handleCardClick = (id: number) => {
     setActiveCard((prev) => (prev === id ? null : id));
   };
 
+  // 🔹 Your projects array
   const projects = [
     {
       id: 1,
@@ -21,50 +29,57 @@ export function Projects() {
         "An institution that provides quality education in business and management, rooted in the principles of the Islamic ethos.",
       image: "/jsbs.png",
       technologies: ["Bootstrap", "SEO", "Next.js", "RWD", "SASS/SCSS"],
-      github: null,
       demo: "https://jsbs.jameasaifiyah.edu/",
-      featured: true,
-      stats: null,
       category: "Educational Website",
       year: "2024",
     },
+
     {
-      id: 2,
+       id: 2,
+  title: "Rugna Adhaar Foundation Website",
+  description:
+    "A website built for Rugna Adhaar Foundation — providing support services and community outreach via a modern frontend, payment integration and automatd tax reciept via email tp donor",
+  image:
+    "https://plus.unsplash.com/premium_photo-1683140538884-07fb31428ca6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170", // you may want to use a screenshot url instead
+  technologies: ["Next.js", "Bootstrap", "Razorpay","Automated Email Reciept","Smtp Integration"],
+  github: null,
+  demo: "https://vercel.com/murtazakps-projects/rugna-adhaar-foundation-website",
+  featured: false,
+  stats: null,
+  category: "Non-profit Website",
+  year: "2025",
+    },
+    {
+      id: 3,
       title: "Qualitia AI",
       description:
-        "Qualitia is a AI native Salesforce automation testing platforms that ensure precision & faster results. Optimise Salesforce automation testing with our innovative platform.",
+        "Qualitia is an AI-native Salesforce automation testing platform that ensures precision & faster results.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Strapi", "RWD"],
-      github: "https://github.com",
       demo: "https://www.qualitia.ai/",
-      featured: true,
-      stats: { stars: 142, views: "2.3k" },
       category: "Landing Page",
       year: "2024",
     },
     {
-      id: 3,
+      id: 4,
       title: "Setoo AI",
       description:
-        "Setoo AI helps businesses create AI agents to automate reviews, schedule calls, and enhance customer interactions. Boost efficiency with our AI-driven solutions.",
+        "Setoo AI helps businesses create AI agents to automate reviews, schedule calls, and enhance customer interactions.",
       image:
-        "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QWl8ZW58MHx8MHx8fDA%3D",
+        "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=500&auto=format&fit=crop&q=60",
       technologies: ["Next.js", "Sanity", "Tailwind CSS", "Turborepo"],
-      github: "https://github.com",
       demo: "https://setoo.ai/",
-      featured: true,
-      stats: { stars: 98, views: "1.8k" },
       category: "AI Landing Page",
       year: "2024",
     },
     {
-      id: 4,
+      id: 5,
       title: "Mediqlogix",
       description:
-        "MediQlogix a digital solution company providing AI and ML-powered platform to hospitals and healthcare organizations’ needs to enhance their “Global Quality Matrix”.",
+        "MediQlogix provides AI and ML-powered digital solutions to enhance hospitals' quality matrices.",
       image:
-        "https://plus.unsplash.com/premium_photo-1699387204159-184c8e0ac55e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMyfHxIZWFsdGhjYXJlfGVufDB8fDB8fHww",
+        "https://plus.unsplash.com/premium_photo-1699387204159-184c8e0ac55e?w=500&auto=format&fit=crop&q=60",
       technologies: [
         "Nextjs",
         "TypeScript",
@@ -72,59 +87,60 @@ export function Projects() {
         "Tailwind CSS",
         "Vercel",
       ],
-      github: "https://github.com",
       demo: "https://mediq-logix.vercel.app/",
-      featured: false,
-      stats: { stars: 76, views: "1.2k" },
       category: "Healthcare Landing",
       year: "2023",
     },
     {
-      id: 5,
+      id: 6,
       title: "Y-Macro",
       description:
-        "Y-Macro Analytics specializes in modeling regional economic trends to drive precision strategies. Where national data stops, we begin—unlocking deeper insights that empower businesses to grow across Bharat.",
+        "Y-Macro Analytics models regional economic trends to empower businesses with deeper insights.",
       image:
-        "https://images.unsplash.com/photo-1707761918029-1295034aa31e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fEFuYWx5dGljc3xlbnwwfHwwfHx8MA%3D%3D",
+        "https://images.unsplash.com/photo-1707761918029-1295034aa31e?w=500&auto=format&fit=crop&q=60",
       technologies: ["React", "Strapi", "Bootstrap", "GSAP"],
-      github: "https://github.com",
       demo: "https://www.y-macro.com/",
-      featured: false,
-      stats: { stars: 234, views: "3.1k" },
       category: "Analytics",
       year: "2024",
     },
     {
-      id: 6,
+      id: 7,
       title: "Techtribe",
       description:
-        "TechTribe Resume Builder transforms the way you apply for jobs. Build professional, ATS-friendly resumes in minutes. Generate personalized cover letters with AI assistance.",
+        "TechTribe Resume Builder transforms how you apply for jobs with AI-powered resumes and cover letters.",
       image:
-        "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGpvYnxlbnwwfHwwfHx8MA%3D%3D",
+        "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&auto=format&fit=crop&q=60",
       technologies: ["React", "Socket.io", "Node.js", "MongoDB"],
-      github: "https://github.com",
       demo: "https://techtribe-resume-builder.vercel.app",
-      featured: false,
-      stats: { stars: 89, views: "1.5k" },
       category: "Productivity",
       year: "2024",
     },
-    // {
-    //   id: 6,
-    //   title: "Crep Protect",
-    //   description:
-    //     "Crep Protect, a leading brand in sneaker care, aimed to strengthen its online presence for a global audience. The goal was to create an advanced e-commerce website that enhances user experience.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1674027392851-7b34f21b07ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fEVDT01NRVJDRXxlbnwwfHwwfHx8MA%3D%3D",
-    //   technologies: ["React", "Shopify", "Liquid", "Theme Development"],
-    //   github: "https://github.com",
-    //   demo: "https://crepprotect.com/",
-    //   featured: false,
-    //   stats: { stars: 156, views: "2.1k" },
-    //   category: "E-Commerce",
-    //   year: "2023",
-    // },
+    {
+      id: 8,
+      title: "Crep Protect",
+      description:
+        "Crep Protect — a global sneaker care e-commerce site with a focus on UX and brand identity.",
+      image:
+        "https://images.unsplash.com/photo-1674027392851-7b34f21b07ee?w=500&auto=format&fit=crop&q=60",
+      technologies: ["React", "Shopify", "Liquid", "Theme Development"],
+      demo: "https://crepprotect.com/",
+      category: "E-Commerce",
+      year: "2023",
+    },
+   
   ];
+
+  // 🔹 Pagination logic
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+  const startIndex = (currentPage - 1) * projectsPerPage;
+  const paginatedProjects = projects.slice(
+    startIndex,
+    startIndex + projectsPerPage
+  );
+
+  const nextPage = () =>
+    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+  const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
 
   return (
     <section id="projects" className="py-24 px-4 relative">
@@ -146,8 +162,16 @@ export function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => {
+        <AnimatePresence mode="wait">
+  <motion.div
+    key={currentPage}
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -30 }}
+    transition={{ duration: 0.4 }}
+    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 "
+  >
+          {paginatedProjects.map((project) => {
             const isActive = activeCard === project.id;
 
             return (
@@ -163,19 +187,12 @@ export function Projects() {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-
-                  {/* Overlay Buttons */}
                   <div
-                    className={`
-                      absolute bottom-4 left-4 right-4 flex space-x-2
-                      transition-all duration-300 transform
-                      ${
-                        isActive
-                          ? "opacity-100 translate-y-0"
-                          : "opacity-0 translate-y-4"
-                      }
-                      group-hover:opacity-100 group-hover:translate-y-0
-                    `}
+                    className={`absolute bottom-4 left-4 right-4 flex space-x-2 transition-all duration-300 transform ${
+                      isActive
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-4"
+                    } group-hover:opacity-100 group-hover:translate-y-0`}
                   >
                     <Button
                       size="sm"
@@ -209,8 +226,6 @@ export function Projects() {
                   <p className="text-muted-foreground mb-4 leading-relaxed text-sm line-clamp-4">
                     {project.description}
                   </p>
-
-                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
@@ -225,6 +240,33 @@ export function Projects() {
               </Card>
             );
           })}
+       
+       </motion.div>
+       </AnimatePresence>
+
+        {/* Pagination Controls */}
+        <div className="flex items-center justify-center gap-4 mt-12">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={prevPage}
+            disabled={currentPage === 1}
+          >
+            <ChevronLeft className="h-4 w-4 mr-1" /> Previous
+          </Button>
+
+          <span className="text-sm text-muted-foreground">
+            Page {currentPage} of {totalPages}
+          </span>
+
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={nextPage}
+            disabled={currentPage === totalPages}
+          >
+            Next <ChevronRight className="h-4 w-4 ml-1" />
+          </Button>
         </div>
       </div>
     </section>
