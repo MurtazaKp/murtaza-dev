@@ -1,7 +1,8 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { Coffee, Heart, Zap, Users } from "lucide-react";
+import { Coffee, Heart, Zap, Users, ArrowDown, Download } from "lucide-react";
+import { Button } from "./ui/button";
 
 export function About() {
   const highlights = [
@@ -130,6 +131,17 @@ export function About() {
                   <div className="text-sm text-muted-foreground">
                     Frontend Experience
                   </div>
+
+                  <Button
+                    size="lg"
+                    className="group px-8 py-6 text-lg bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mt-5"
+                    asChild
+                  >
+                    <a download href="/Murtaza-Khopoliwala.pdf">
+                      Download Resume
+                      <Download className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
+                    </a>
+                  </Button>
                 </div>
               </div>
             </Card>
