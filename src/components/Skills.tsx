@@ -34,7 +34,6 @@ export function Skills() {
         "Bootstrap",
         "Ant Design",
         "GSAP",
-        "Framer Motion",
         "Responsive Design",
         "Figma",
       ],
@@ -46,7 +45,6 @@ export function Skills() {
       gradient: "from-yellow-500 to-orange-500",
       skills: [
         "Lazy Loading",
-        "Code Splitting",
         "Image Optimization",
         "Lighthouse",
         "Web Vitals",
@@ -77,7 +75,14 @@ export function Skills() {
       description: "Content management systems and hosting",
       icon: Server,
       gradient: "from-teal-500 to-blue-500",
-      skills: ["Sanity.io", "Strapi", "Git (GitHub)", "Vercel", "Netlify"],
+      skills: [
+        "Sanity.io",
+        "Strapi",
+        "Prismic.io",
+        "Git (GitHub)",
+        "Vercel",
+        "Netlify",
+      ],
     },
   ];
 
