@@ -40,7 +40,7 @@ export function Contact() {
   } | null>(null);
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setForm({ ...form, [e.target.id]: e.target.value });
   };
