@@ -24,6 +24,45 @@ export function Projects() {
   const projects = [
     {
       id: 1,
+      title: "Gharfolio",
+      description:
+        "A multi-tenant website & lead generation platform for Indian real estate brokers. Features instant 3-page broker website generation, customizable themes (Haven, Meridian, Noir), property listing management, and lead tracking.",
+      image: "/gharfolio.jpg",
+      technologies: [
+        "Next.js 16",
+        "TypeScript",
+        "Tailwind CSS v4",
+        "Supabase",
+        "PostgreSQL",
+        "RLS",
+        "Motion",
+        "Vercel",
+      ],
+      demo: "https://gharfolio.vercel.app",
+      category: "SaaS / PropTech Platform",
+      year: "2026",
+    },
+    {
+      id: 2,
+      title: "Digital Pass & Event System",
+      description:
+        "An event registration and digital QR pass verification system built for Anjuman E Najmi Khopoli. Features instant dynamic QR pass generation, live camera scanning check-in, Google Sheets real-time sync, and automated notifications.",
+      image: "/digital-pass.jpg",
+      technologies: [
+        "Next.js",
+        "Supabase",
+        "QR Code Engine",
+        "Tailwind CSS",
+        "Google Sheets API",
+        "Nodemailer",
+        "Vercel",
+      ],
+      demo: "https://khopoli-relay.vercel.app",
+      category: "Web App / Event Tech",
+      year: "2026",
+    },
+    {
+      id: 3,
       title: "MenuMuse",
       description:
         "A digital menu platform that helps businesses create and share interactive menus, pricing, and dishes videos through a QR Code, improving customer experience and engagement.",
@@ -43,7 +82,7 @@ export function Projects() {
     },
 
     {
-      id: 2,
+      id: 4,
       title: "SparkFuture Technologies",
       description:
         "A modern technology solutions company offering web, mobile, and software development services, focused on helping businesses enhance their digital presence, streamline operations, and achieve scalable growth through innovative solutions.",
@@ -62,7 +101,7 @@ export function Projects() {
       year: "2026",
     },
     {
-      id: 3,
+      id: 5,
       title: "Jamea Saifiyah Business School (JSBS)",
       description:
         "An institution that provides quality education in business and management, rooted in the principles of the Islamic ethos.",
@@ -74,7 +113,7 @@ export function Projects() {
     },
 
     {
-      id: 4,
+      id: 6,
       title: "Rugna Adhaar Foundation Website",
       description:
         "A website built for Rugna Adhaar Foundation — providing support services and community outreach via a modern frontend, payment integration and automatd tax reciept via email tp donor",
@@ -95,7 +134,7 @@ export function Projects() {
       year: "2025",
     },
     {
-      id: 5,
+      id: 7,
       title: "Qualitia AI",
       description:
         "Qualitia is an AI-native Salesforce automation testing platform that ensures precision & faster results.",
@@ -107,7 +146,7 @@ export function Projects() {
       year: "2024",
     },
     {
-      id: 6,
+      id: 8,
       title: "Setoo AI",
       description:
         "Setoo AI helps businesses create AI agents to automate reviews, schedule calls, and enhance customer interactions.",
@@ -119,7 +158,7 @@ export function Projects() {
       year: "2024",
     },
     {
-      id: 7,
+      id: 9,
       title: "Mediqlogix",
       description:
         "MediQlogix provides AI and ML-powered digital solutions to enhance hospitals' quality matrices.",
@@ -137,7 +176,7 @@ export function Projects() {
       year: "2023",
     },
     {
-      id: 8,
+      id: 10,
       title: "Y-Macro",
       description:
         "Y-Macro Analytics models regional economic trends to empower businesses with deeper insights.",
@@ -149,7 +188,7 @@ export function Projects() {
       year: "2024",
     },
     {
-      id: 9,
+      id: 11,
       title: "Techtribe",
       description:
         "TechTribe Resume Builder transforms how you apply for jobs with AI-powered resumes and cover letters.",
@@ -161,7 +200,7 @@ export function Projects() {
       year: "2024",
     },
     {
-      id: 10,
+      id: 12,
       title: "Crep Protect",
       description:
         "Crep Protect — a global sneaker care e-commerce site with a focus on UX and brand identity.",
